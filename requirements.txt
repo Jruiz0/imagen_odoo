@@ -1,0 +1,10 @@
+# html2text	
+# Wkhtmltopdf
+# filetype
+# python-magic==0.4.15
+# openpyxl
+# simplejson
+# pdf417gen
+# pandas==0.25.3
+# numpy==1.17.4
+# xlrd==1.1.0
