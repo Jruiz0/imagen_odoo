@@ -2,29 +2,30 @@ version: '2'
 services:
   web:
     build: .
-    image: odoo:16.0
+    image: odoo:18.0
     depends_on:
       - db
     ports:
       - "8069:8069"
     volumes:
-      - odoo16:/var/lib/odoo
+      - odoo18:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./addons:/mnt/extra-addons
+      - C:\Users\junio\OneDrive\Documentos\GitHub\sigbp-bolipuertos:/mnt/sigbp-bolipuertos
+      - C:\Users\junio\OneDrive\Documentos\GitHub\enterprise:/mnt/enterprise
   db:
     ports:
       - "5432:5432"
-    image: postgres:12
+    image: postgres:15
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo16-db:/var/lib/postgresql/data/pgdata
+      - odoo18-db:/var/lib/postgresql/data/pgdata
 volumes:
-  odoo16:
-  odoo16-db:
+  odoo18:
+  odoo18-db:
 
   # me8e-s3ix-zisv
 
